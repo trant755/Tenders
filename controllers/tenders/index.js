@@ -1,3 +1,3 @@
 const { syncTenders } = require("./syncTenders");
 
-module.exports = { addEmployerToList };
+module.exports = { syncTenders };

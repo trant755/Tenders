@@ -1,9 +1,9 @@
 const express = require("express");
 const tendersRouter = express.Router();
 
-const { ctrlWrapper } = require("../../middlewares");
-const { addEmployerToList } = require("../../controllers/employer");
+const { ctrlWrapper } = require("../middlewares");
+const { syncTenders } = require("../controllers/tenders");
 
-tendersRouter.post("/tenders/sync", ctrlWrapper(syncTenders));
+tendersRouter.get("/sync", ctrlWrapper(syncTenders));
 
 module.exports = tendersRouter;
